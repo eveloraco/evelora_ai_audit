@@ -42,7 +42,18 @@ html, body, [class*="css"], .stApp {
 div[class*="st-emotion-cache"] { background: transparent !important; }
 
 p, span, li, label, div { color: #F7E7CE !important; font-family: 'Lato', sans-serif !important; }
-h1, h2, h3 { font-family: 'Playfair Display', serif !important; color: #C5AA6D !important; }
+h1, h2, h3,
+h1 *, h2 *, h3 *,
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3,
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3,
+div[class*="st-emotion-cache"] h1,
+div[class*="st-emotion-cache"] h2,
+div[class*="st-emotion-cache"] h3 {
+    font-family: 'Playfair Display', serif !important;
+    color: #C5AA6D !important;
+}
 #MainMenu, footer, header { visibility: hidden; }
 hr { border-color: #2a2a2a !important; }
 
@@ -273,7 +284,7 @@ st.markdown("""
         Evelora Co &nbsp;✦&nbsp; Free Tool
     </p>
     <h1 style="font-family:'Playfair Display',serif; font-size:2.4rem;
-               color:#C5AA6D; line-height:1.15; margin-bottom:0.6rem;">
+               color:#C5AA6D !important; line-height:1.15; margin-bottom:0.6rem;">
         AI Readiness Audit
     </h1>
     <p style="font-size:1rem; color:#E7C1B3; max-width:520px;
